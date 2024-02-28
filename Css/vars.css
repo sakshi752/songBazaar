@@ -1,0 +1,15 @@
+:root{
+    /* color */
+    --color-text:white;
+    --color-text-secondary:rgb(201, 201, 201);
+    --color-primary:#1c1c1c;
+    --color-secondary:rgba(38, 37, 37, 0.563);
+    --color-ternary:rgb(44, 44, 44);
+    --color-bg:rgba(56, 56, 56, 0.49);
+
+    /* fonts */
+    /* --font-roboto:"Roboto"; */
+    --main-padding:15px 0 20px 30px;
+
+    --container-borderradius:10px;
+}
