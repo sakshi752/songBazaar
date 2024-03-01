@@ -208,8 +208,9 @@ body{
 
 .section-2 .bottom-container .card{
     min-height: 250px;
-    
-    /* width: 250px; */
+    /* min-width: 100px;
+    max-width: 200px; */
+    /* position: relative; */
     border: none;
     background: #1c1c1c9f;
     padding: 2%;
@@ -233,15 +234,8 @@ body{
     border-radius: 15px;
 }
 
-.section-2 .bottom-container .custom-line{
-    /* text-align: center; */
-    width: 60%;
-    margin: 10px auto;
-    height: 1px;
-    background-color: white;
-}
 .section-2 .bottom-container .footer-container{
-    margin-top: 20px;
+    margin-top: 7%;
     padding: var(--main-padding);
     z-index: 1;
 }

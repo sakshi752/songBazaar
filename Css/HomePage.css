@@ -1,0 +1,124 @@
+.section-1 .bottom-container .cards {
+    width: 100%;
+}
+
+.section-1 .bottom-container .cards .card {
+    position: relative;
+}
+
+.section-1 .bottom-container .cards #card1::after {
+    background: url(/Images/bollywood.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    opacity: .4;
+    z-index: 1;
+}
+
+.section-1 .bottom-container .cards #card2::after {
+    background: url(/Images/hollywood.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    opacity: .4;
+    z-index: 1;
+}
+
+.section-1 .bottom-container .cards #card3::after {
+    background: url(/Images/podcast.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    opacity: .4;
+    z-index: 1;
+}
+
+.section-1 .bottom-container .cards .card button {
+    background-color: rgba(255, 255, 255, 0.857);
+    color: hotpink;
+    position: relative;
+    margin: auto;
+    z-index: 2;
+    font-size: 1rem;
+    letter-spacing: 1.4px;
+    border-radius: 10px;
+    padding: 10px 5px;
+    width: 70%;
+}
+
+.section-1 .bottom-container .cards .card button:hover {
+    outline: none;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.987);
+}
+
+.bottom-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.section-1 .bottom-container .bottom-container-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    margin-bottom: 5px;
+    color: var(--color-text-secondary);
+}
+.section-1 .bottom-container .bottom-container-footer h5{
+    font-size: .9rem;
+    font-weight: 400;
+}
+
+.section-2 .top-container .profile-container img{
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    box-shadow: 0 0 10px hotpink;
+}
+.section-2 .top-container .btn-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.section-2 .top-container .btn-container button{
+    background: none;
+    outline: none;
+    border: none;
+    border-radius: 30px;
+    width: 70%;
+    padding: 5%;
+    font-size: 1.2rem;
+    font-weight: 500;
+    background-color: rgb(244, 244, 244);
+    /* color: var(--color-text-secondary); */
+}
+.section-2 .top-container .btn-container button a{
+    color: var(--color-primary);
+    text-decoration: none;
+}
+.section-2 .bottom-container .title{
+    display: inline;
+}

@@ -54,7 +54,11 @@ function showAllCards() {
     });
 }
 
-
+// const logo=document.getElementById('logo')
+// logo.addEventListener('click',()=>{
+//     const showAllButton=document.getElementById('showAllButton')
+//     showAllButton.style.display='visible'
+// })
 window.onload = appendCards;
 
 document.getElementById('showAllButton').addEventListener('click', showAllCards);
