@@ -33,6 +33,7 @@ function createCard(playlist) {
 // Function to append cards to the container
 function appendCards() {
     const container = document.getElementById('playlist-row');
+    container.style.maxHeight = '43vh';
     playlists.slice(0, 4).forEach(playlist => {
         const card = createCard(playlist);
         container.appendChild(card);
