@@ -1,3 +1,13 @@
+// const playlists = [
+//     { image: "Images\\img1.jpg", title: "Title 1", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+//     { image: "Images\\img2.jpg", title: "Title 2", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+//     { image: "Images\\img3.jpg", title: "Title 3", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+//     { image: "Images\\img4.jpg", title: "Title 4", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+//     { image: "Images\\img5.jpg", title: "Title 5", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+//     { image: "Images\\img6.jpg", title: "Title 6", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+//     { image: "Images\\img7.jpg", title: "Title 7", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+//     { image: "Images\\img8.jpg", title: "Title 8", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+// ];
 const bollywoodSongs = [
     { image: "Images/bolly/1.jpg", title: "Title 1", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
     { image: "Images/bolly/2.jpg", title: "Title 2", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
@@ -52,6 +62,7 @@ const customTitle = document.createElement('h5');
 function handleBollywood() {
     const title = document.getElementById('showAllButton')
     title.style.display = "none"
+    customTitle.style.display="block"
     customTitle.textContent = "Bollywood Songs";
     customTitle.style.fontSize = "1.5rem";
     customTitle.style.color = "white";
@@ -73,7 +84,7 @@ function handleBollywood() {
 function handleHollywood() {
     const title = document.getElementById('showAllButton')
     title.style.display = "none"
-
+    customTitle.style.display="block"
     customTitle.textContent = "Hollywood Songs";
     customTitle.style.fontSize = "1.5rem";
     customTitle.style.color = "white";
@@ -95,7 +106,7 @@ function handleHollywood() {
 function handlePodcaste() {
     const title = document.getElementById('showAllButton')
     title.style.display = "none"
-
+    customTitle.style.display="block"
     customTitle.textContent = "Podcasts";
     customTitle.style.fontSize = "1.5rem";
     customTitle.style.color = "white";
@@ -124,6 +135,7 @@ hollyBtn.addEventListener('click', handleHollywood)
 podcastBtn.addEventListener('click', handlePodcaste)
 
 
+// search feature
 function performSearch(query) {
     query = query.trim().toLowerCase();
 
@@ -143,6 +155,8 @@ function performSearch(query) {
 function displaySearchResults(results) {
     const title = document.getElementById('showAllButton')
     title.style.display = "none"
+
+    customTitle.style.display="block"
     customTitle.innerText = ""
     customTitle.textContent = "Searched results";
     customTitle.style.fontSize = "1.5rem";
@@ -176,6 +190,7 @@ function displaySearchResults(results) {
 document.addEventListener("DOMContentLoaded", function () {
     const searchLink = document.getElementById("searchLink");
     const searchInput = document.getElementById("search-input");
+    // const homeLink=document.getElementById("homeLink")
 
     searchLink.addEventListener("click", function (event) {
         event.preventDefault(); // Prevent default link behavior
@@ -192,8 +207,8 @@ document.addEventListener("DOMContentLoaded", function () {
         if (event.key === "Enter") {
             const query = searchInput.value;
             if (query === "") {
-
-                alert("please enter input first")
+                const container = document.getElementById('playlist-row');
+                container.innerHTML="please enter proper input"
             }
             else {
                 performSearch(query)
@@ -201,3 +216,9 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+// home link feature
+homeLink.addEventListener('click',()=>{
+    document.getElementById('showAllButton').style.display="block"
+    customTitle.style.display="none"
+})

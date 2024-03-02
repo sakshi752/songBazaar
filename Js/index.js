@@ -32,7 +32,9 @@ function createCard(playlist) {
 
 // Function to append cards to the container
 function appendCards() {
+
     const container = document.getElementById('playlist-row');
+    container.innerHTML = '';
     container.style.maxHeight = '43vh';
     playlists.slice(0, 4).forEach(playlist => {
         const card = createCard(playlist);
@@ -54,11 +56,12 @@ function showAllCards() {
     });
 }
 
-// const logo=document.getElementById('logo')
-// logo.addEventListener('click',()=>{
-//     const showAllButton=document.getElementById('showAllButton')
-//     showAllButton.style.display='visible'
-// })
 window.onload = appendCards;
 
 document.getElementById('showAllButton').addEventListener('click', showAllCards);
+
+// home link feature half logic in home.js
+document.addEventListener("DOMContentLoaded", function (){
+  const homeLink=document.getElementById('homeLink')
+  homeLink.addEventListener('click',appendCards)
+})
