@@ -57,8 +57,34 @@ function createCard(playlist) {
 
     return card;
 }
-
 const customTitle = document.createElement('h5');
+
+function handleCard(playlist){
+    const {image,title,description}=playlist
+
+    const title1 = document.getElementById('showAllButton')
+    title1.style.display = "none"
+    customTitle.style.display="none"
+    const container = document.getElementById('playlist-row');
+    container.innerHTML=`
+    <div class="song-container">
+    <div class="song-image-continer">
+      <img src=${image} alt="" class="">
+    </div>
+    <div class="song-description-container">
+      <h3>${title}</h3>
+      <p>${description}</p>
+      <div class="song-play-btnsContainer">
+      <i class="fa-solid fa-arrow-left-long"></i>
+      <i class="fa-solid fa-play"></i>
+      <i class="fa-solid fa-arrow-right-long"></i>
+      </div>
+    </div>
+  </div>
+    `
+    console.log(playlist)
+}
+
 function handleBollywood() {
     const title = document.getElementById('showAllButton')
     title.style.display = "none"
@@ -79,6 +105,9 @@ function handleBollywood() {
     bollywoodSongs.forEach(playlist => {
         const card = createCard(playlist);
         container.appendChild(card);
+        card.addEventListener('click',()=>{
+            handleCard(playlist)
+        })
     });
 }
 function handleHollywood() {
@@ -222,3 +251,6 @@ homeLink.addEventListener('click',()=>{
     document.getElementById('showAllButton').style.display="block"
     customTitle.style.display="none"
 })
+
+// song feature
+
