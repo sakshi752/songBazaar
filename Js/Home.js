@@ -52,8 +52,6 @@ const customTitle = document.createElement('h5');
 function handleBollywood() {
     const title = document.getElementById('showAllButton')
     title.style.display = "none"
-
-
     customTitle.textContent = "Bollywood Songs";
     customTitle.style.fontSize = "1.5rem";
     customTitle.style.color = "white";
@@ -124,3 +122,82 @@ const podcastBtn = document.querySelector('#podcastBtn')
 bollyBtn.addEventListener('click', handleBollywood)
 hollyBtn.addEventListener('click', handleHollywood)
 podcastBtn.addEventListener('click', handlePodcaste)
+
+
+function performSearch(query) {
+    query = query.trim().toLowerCase();
+
+    const mixedContent = [...bollywoodSongs, ...hollywoodSongs, ...podcasts]
+
+
+    const searchResults = [];
+    mixedContent.forEach((song) => {
+        if (song.title.toLocaleLowerCase().includes(query)) {
+            searchResults.push(song);
+        }
+    })
+
+    displaySearchResults(searchResults)
+}
+
+function displaySearchResults(results) {
+    const title = document.getElementById('showAllButton')
+    title.style.display = "none"
+    customTitle.innerText = ""
+    customTitle.textContent = "Searched results";
+    customTitle.style.fontSize = "1.5rem";
+    customTitle.style.color = "white";
+    customTitle.style.marginBottom = "20px";
+    customTitle.style.marginTop = "20px";
+    customTitle.style.fontWeight = "700";
+    const container = document.getElementById('playlist-row');
+    container.insertAdjacentElement('beforebegin', customTitle);
+    container.innerHTML = '';
+    if (results.length > 0) {
+        container.textContent = '';
+        container.style.maxHeight = '43vh';
+        container.style.overflowY = 'auto';
+        container.style.scrollbarWidth = '.7';
+        container.style.scrollbarColor = 'rgb(255, 58, 153) var(--color-secondary)';
+
+        results.forEach(item => {
+            const card = createCard(item);
+            container.appendChild(card);
+        });
+    }
+    else{
+        container.textContent="no results found"
+        container.style.margin='auto'
+    }
+
+    console.log(results);
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    const searchLink = document.getElementById("searchLink");
+    const searchInput = document.getElementById("search-input");
+
+    searchLink.addEventListener("click", function (event) {
+        event.preventDefault(); // Prevent default link behavior
+        searchInput.style.border = "2px solid hotpink"
+        searchInput.focus(); // Focus on the search input field
+    });
+
+    searchInput.addEventListener('input', function () {
+        const query = searchInput.value;
+        performSearch(query);
+    });
+
+    searchInput.addEventListener('keypress', function (event) {
+        if (event.key === "Enter") {
+            const query = searchInput.value;
+            if (query === "") {
+
+                alert("please enter input first")
+            }
+            else {
+                performSearch(query)
+            }
+        }
+    });
+});
