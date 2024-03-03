@@ -130,6 +130,9 @@ function handleHollywood() {
     hollywoodSongs.forEach(playlist => {
         const card = createCard(playlist);
         container.appendChild(card);
+        card.addEventListener('click',()=>{
+            handleCard(playlist)
+        })
     });
 }
 function handlePodcaste() {
@@ -152,6 +155,9 @@ function handlePodcaste() {
     podcasts.forEach(playlist => {
         const card = createCard(playlist);
         container.appendChild(card);
+        card.addEventListener('click',()=>{
+            handleCard(playlist)
+        })
     });
 }
 
@@ -206,6 +212,9 @@ function displaySearchResults(results) {
         results.forEach(item => {
             const card = createCard(item);
             container.appendChild(card);
+            card.addEventListener('click',()=>{
+                handleCard(item)
+            })
         });
     }
     else{
