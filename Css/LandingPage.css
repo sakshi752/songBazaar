@@ -139,17 +139,7 @@ body{
     border-radius: 10px 10px 0 0;
 
 }
-.section-2 .top-container .arrow-btn{
-    background: none;
-    border: none;
-    color: var(--color-text-secondary);
-    font-size: 2rem;
-    margin-left: 5px;
-    cursor:pointer;
-}
-.section-2 .top-container .arrow-btn:disabled {
-    cursor: not-allowed;
-}
+
 
 .section-2 .top-container .btn-container{
     display: flex;
