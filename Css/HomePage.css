@@ -7,7 +7,7 @@
 }
 
 .section-1 .bottom-container .cards #card1::after {
-    background: url(/songBazaar/Images/bollywood.jpg);
+    background: url(/Images/bollywood.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -23,7 +23,7 @@
 }
 
 .section-1 .bottom-container .cards #card2::after {
-    background: url(/songBazaar/Images/hollywood.jpg);
+    background: url(/Images/hollywood.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -39,7 +39,7 @@
 }
 
 .section-1 .bottom-container .cards #card3::after {
-    background: url(/songBazaar/Images/podcast.jpg);
+    background: url(/Images/podcast.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
