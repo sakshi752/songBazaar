@@ -140,6 +140,15 @@ body{
     border-radius: 10px 10px 0 0;
 
 }
+.section-2 .top-container-Home{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    background-color: var(--color-secondary);
+    padding: var(--main-padding);
+    border-radius: 10px 10px 0 0;
+}
 
 .section-2 .top-container .arrow-button{
     display: flex;
