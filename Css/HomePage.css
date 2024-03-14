@@ -7,7 +7,7 @@
 }
 
 .section-1 .bottom-container .cards #card1::after {
-    background: url(/Images/bollywood.jpg);
+    background: url(/songBazaar/Images/bollywood.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -23,7 +23,7 @@
 }
 
 .section-1 .bottom-container .cards #card2::after {
-    background: url(/Images/hollywood.jpg);
+    background: url(/songBazaar/Images/hollywood.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -39,7 +39,7 @@
 }
 
 .section-1 .bottom-container .cards #card3::after {
-    background: url(/Images/podcast.jpg);
+    background: url(/songBazaar/Images/podcast.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -97,18 +97,18 @@
     justify-content: space-between;
 } */
 
-.section-2 .top-container-Home .profile-container img{
+.section-2 .top-container .profile-container img{
     height: 50px;
     width: 50px;
     border-radius: 100%;
     box-shadow: 0 0 10px hotpink;
 }
-.section-2 .top-container-Home .btn-container{
+.section-2 .top-container .btn-container{
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.section-2 .top-container-Home .btn-container button{
+.section-2 .top-container .btn-container button{
     background: none;
     outline: none;
     border: none;
@@ -120,15 +120,15 @@
     background-color: rgb(244, 244, 244);
     /* color: var(--color-text-secondary); */
 }
-.section-2 .top-container-Home .btn-container button a{
+.section-2 .top-container .btn-container button a{
     color: var(--color-primary);
     text-decoration: none;
 }
 
-.section-2 .top-container-Home .search{
+.section-2 .top-container .search{
     width: 35%;
 }
-.section-2 .top-container-Home #search-input{
+.section-2 .top-container #search-input{
     width: 100%;
     padding: 5px;
     outline: none;
@@ -211,7 +211,7 @@
     }
 }
 @media screen and (max-width:481px) {
-    .section-2 .top-container-Home .search{
+    .section-2 .top-container .search{
         min-width: 80%;
     }
 }
